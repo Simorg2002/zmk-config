@@ -241,10 +241,19 @@
 
         Sym {
             bindings = <
-&none  &none  &kp AMPERSAND  &kp PIPE        &kp GRAVE     &kp TILDE    &none  &none  &none  &none  &none  &none
-&none  &none  &kp MINUS      &kp PLUS        &kp ASTERISK  &kp AT       &none  &none  &none  &none  &none  &none
-&none  &none  &kp PERCENT    &kp UNDERSCORE  &kp CARET     &kp HASH     &none  &none  &none  &none  &none  &none
-                             &kp BACKSLASH   &kp SLASH     &kp EQUAL    &none  &none  &none
+&none  &none  &kp HASH     &kp AMPERSAND   &kp GRAVE  &kp TILDE       &none  &none  &none  &none  &none  &none
+&none  &none  &kp PIPE     &kp CARET       &kp PLUS   &kp ASTERISK    &none  &none  &none  &none  &none  &none
+&none  &none  &kp PERCENT  &kp UNDERSCORE  &kp MINUS  &kp SLASH       &none  &none  &none  &none  &none  &none
+                           &kp BACKSLASH   &kp EQUAL  &kp AT          &none  &none  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
