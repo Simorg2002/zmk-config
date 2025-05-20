@@ -46,6 +46,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        CapsCapsWord: CapsCapsWord {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPSCAPSWORD";
+            #binding-cells = <0>;
+            bindings = <&caps_word>, <&kp CLCK>;
+        };
     };
 
     keymap {
@@ -59,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W             &kp F               &kp P          &kp B            &kp Y        &kp L                          &kp U                &kp Y              &kp SQT            &kp BSPC
-&kp LCTRL  &HRML LEFT_GUI A  &HRML LEFT_ALT R  &HRML LEFT_SHIFT S  &HRML LCTRL T  &kp G            &kp M        &HRMR RCTRL N                  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_ALT I  &HRMR RIGHT_GUI O  &kp SQT
-&kp LSHFT  &kp Z             &kp X             &kp C               &kp D          &kp V            &kp N        &kp M                          &kp COMMA            &kp DOT            &kp FSLH           &kp ESC
-                                               &lt 0 ESC           &lt 0 SPACE    &kp BACKSPACE    &lt 0 ENTER  &LayerStickyKey 0 RIGHT_SHIFT  &mo 1
+&kp TAB        &kp Q             &kp W             &kp F               &kp P          &kp B            &kp Y        &kp L                          &kp U                &kp Y              &kp SQT            &kp BSPC
+&CapsCapsWord  &HRML LEFT_GUI A  &HRML LEFT_ALT R  &HRML LEFT_SHIFT S  &HRML LCTRL T  &kp G            &kp M        &HRMR RCTRL N                  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_ALT I  &HRMR RIGHT_GUI O  &kp SQT
+&kp LSHFT      &kp Z             &kp X             &kp C               &kp D          &kp V            &kp N        &kp M                          &kp COMMA            &kp DOT            &kp FSLH           &kp ESC
+                                                   &lt 0 ESC           &lt 0 SPACE    &kp BACKSPACE    &lt 0 ENTER  &LayerStickyKey 0 RIGHT_SHIFT  &mo 1
             >;
         };
 
