@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -56,7 +57,7 @@
         commaMORPH: commaMORPH {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMAMORPH";
-            bindings = <&kp KP_COMMA>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -65,7 +66,7 @@
         dotMORPH: dotMORPH {
             compatible = "zmk,behavior-mod-morph";
             label = "DOTMORPH";
-            bindings = <&kp KP_DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -211,7 +212,7 @@
 &none  &kp Q             &kp W             &kp F               &kp P          &kp B            &kp J        &kp L                          &kp U                &kp Y              &kp SQT            &none
 &none  &HRML LEFT_GUI A  &HRML LEFT_ALT R  &HRML LEFT_SHIFT S  &HRML LCTRL T  &kp G            &kp M        &HRMR RCTRL N                  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_ALT I  &HRMR RIGHT_GUI O  &none
 &none  &kp Z             &kp X             &kp C               &kp D          &kp V            &kp K        &kp H                          &commaMORPH          &dotMORPH          &markMORPH         &none
-                                           &lt 1 ESC           &lt 2 SPACE    &kp BACKSPACE    &lt 0 ENTER  &LayerStickyKey 0 RIGHT_SHIFT  &mo 3
+                                           &lt 1 ESC           &lt 2 SPACE    &kp BACKSPACE    &lt 0 ENTER  &LayerStickyKey 3 RIGHT_SHIFT  &mo 4
             >;
         };
 
@@ -248,12 +249,12 @@
             >;
         };
 
-        layer_4 {
+        controls {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans           &trans             &trans  &trans  &trans
             >;
         };
     };
